@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iTantra</string>
+    <string name="status_initializing">Initializing…</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_engines_ready">STT/TTS engines loaded</string>
+    <string name="status_engines_missing">Models missing — see docs/MODEL_SETUP.md. Using system TTS fallback.</string>
+    <string name="permissions_required">Microphone and Bluetooth permissions are required.</string>
+    <string name="status_waiting_for_peer">Waiting for peer phone to connect…</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_connected_to">Connected to %1$s</string>
+    <string name="status_failed">Connection failed: %1$s</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_no_paired_devices">No paired Bluetooth devices found. Pair the two phones first in Android Settings.</string>
+    <string name="pick_paired_device">Choose paired phone</string>
+    <string name="mode_phone_call">Phone Call</string>
+    <string name="mode_walkie_talkie">Walkie-Talkie</string>
+    <string name="host_session">Host</string>
+    <string name="join_session">Join</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="hold_to_talk">HOLD TO TALK</string>
+    <string name="transcript_header">Transcript</string>
+    <string name="latency_ms">Last message latency: %1$d ms</string>
+</resources>

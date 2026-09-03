@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_indigo">#6366F1</color>
+    <color name="primary_blue">#38BDF8</color>
+    <color name="accent_teal">#06B6D4</color>
+    <color name="status_green">#10B981</color>
+    <color name="status_red">#F43F5E</color>
+    <color name="bg_app">#0B0F19</color>
+    <color name="bg_card">#151C2C</color>
+    <color name="bg_transcript">#030712</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_transcript">#E2E8F0</color>
+    <color name="border_card">#1E293B</color>
+    <color name="ic_launcher_background">#0B0F19</color>
+</resources>

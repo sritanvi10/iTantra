@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Itantra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_indigo</item>
+        <item name="colorPrimaryDark">#0B0F19</item>
+        <item name="colorAccent">@color/accent_teal</item>
+        <item name="android:windowBackground">@color/bg_app</item>
+    </style>
+</resources>
