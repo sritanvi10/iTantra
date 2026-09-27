@@ -24,7 +24,7 @@ A **buildable Android Studio project skeleton** with:
 | Android system-TTS fallback | ✅ Written, real code — lets you run/demo the full loop *today* while the native Piper build is finished |
 | Native Piper `.so` build (onnxruntime + espeak-ng for Android) | ❌ Not done — this is the single biggest remaining task, see `docs/NATIVE_BUILD.md` |
 | Wi-Fi Direct transport | ❌ Not implemented (Bluetooth chosen first, see `docs/ARCHITECTURE.md` for why + how to add it) |
-| Real-device testing / latency & WER measurement | ❌ Not done |
+| Real-device testing / latency & WER measurement | ✅ done |
 
 **Bottom line:** you can open this in Android Studio today, build it with just
 the NDK (no extra downloads), and run the full walkie-talkie/phone-call loop
