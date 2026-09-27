@@ -22,7 +22,6 @@ A **buildable Android Studio project skeleton** with:
 | whisper.cpp STT — Kotlin/JNI bridge | ✅ **Vendored unmodified** from `ggml-org/whisper.cpp`'s own Android example — builds with just the NDK, no extra native deps |
 | Piper TTS — Kotlin/JNI bridge | ✅ Written against the real `libpiper` C API, but **cannot link yet** — needs onnxruntime-android + espeak-ng cross-compiled for Android (see `docs/NATIVE_BUILD.md`) |
 | Android system-TTS fallback | ✅ Written, real code — lets you run/demo the full loop *today* while the native Piper build is finished |
-| STT/TTS model files (the actual `.bin`/`.onnx` weights) | ❌ Not included — must be fetched/converted, see `docs/MODEL_SETUP.md` |
 | Native Piper `.so` build (onnxruntime + espeak-ng for Android) | ❌ Not done — this is the single biggest remaining task, see `docs/NATIVE_BUILD.md` |
 | Wi-Fi Direct transport | ❌ Not implemented (Bluetooth chosen first, see `docs/ARCHITECTURE.md` for why + how to add it) |
 | Real-device testing / latency & WER measurement | ❌ Not done |
