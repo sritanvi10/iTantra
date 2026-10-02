@@ -34,12 +34,6 @@ and the final ISRO-spec pipeline are (1) dropping in the actual model files
 and (2) finishing the native Piper cross-compile — both scoped precisely in
 `docs/`.
 
-⚠ **One thing to read before you submit anything:** `piper1-gpl` (and its
-espeak-ng dependency) are GPLv3-licensed, unlike the rest of this stack
-(MIT). This has real implications for how the app can be distributed —
-see `docs/LICENSING.md`. It's likely a non-issue for an open SIH
-submission, but worth being deliberate about rather than surprised by
-later.
 
 ## Repo layout
 
@@ -76,36 +70,3 @@ iTantra-Transceiver/
     └── PROGRESS_LOG.md              what was done this session, what's next
 ```
 
-## Quick start (today, no extra downloads)
-
-1. Open `iTantra-Transceiver/` in Android Studio (Hedgehog+ recommended, matches
-   the AGP 8.2.0 / Gradle 8.4 setup already validated for this project).
-   Note: `gradlew`/`gradlew.bat` and the wrapper jar aren't included in this
-   drop (the jar is a binary this environment couldn't fetch) — Android
-   Studio regenerates them automatically on first open/sync. If you need
-   command-line builds before that, run `gradle wrapper --gradle-version 8.4`
-   once with a local Gradle install.
-2. Let Gradle sync — the whisper.cpp native module builds automatically via
-   the NDK (CMake, no external deps). The Piper native module is
-   **auto-skipped** until you set `onnxruntime.aar.dir` / `espeakng.ndk.dir`
-   in `local.properties` (see `docs/NATIVE_BUILD.md`); the app falls back to
-   Android's system TTS in the meantime.
-3. Drop STT model file(s) on-device at
-   `/Android/data/com.isro.itantra/files/models/stt/shared/ggml-model.bin`
-   (see `docs/MODEL_SETUP.md` for exact adb commands and where to get one).
-4. Pair the two test phones in Android Bluetooth settings first (OS-level
-   pairing is a prerequisite for the RFCOMM connection this app makes).
-5. Install the app on both phones. On phone A tap **Host**; on phone B tap
-   **Join** and pick phone A from the paired-device list.
-6. Pick **Phone Call** mode (always listening) or **Walkie-Talkie** mode
-   (hold the button to talk) on each phone independently.
-7. Speak — the transcript and round-trip latency show on screen.
-
-## Next session priorities (see `docs/PROGRESS_LOG.md` for detail)
-
-1. Finish the native Piper build (`docs/NATIVE_BUILD.md`) — highest priority,
-   this is what makes TTS actually offline/on-spec instead of the fallback.
-2. Get STT models in place and run a first real WER pass in one language.
-3. Two-device latency measurement (the app already logs it — just needs a
-   real run and a place to record results for the evaluation writeup).
-4. Tune the VAD thresholds in `AudioRecorder.kt` against real ambient noise.
